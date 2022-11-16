@@ -9,6 +9,8 @@ public class MinMax {
         //Déclaration des variables prixMin et prixMax
         double prixMin = prix[0];
         double prixMax = prix[0];
+        double totalPrix = 0;
+        int j = 0;
 
         for (int i = 0; i < noms.length; i++){
             if(prix[i] < prixMin){
@@ -17,8 +19,11 @@ public class MinMax {
             if(prix[i] > prixMax){
                 prixMax  = prix[i];
             }
+            totalPrix = totalPrix + prix[i];
+            j = i+1;
         }
         System.out.println("Prix min :" + prixMin);
         System.out.println("Prix max :" + prixMax);
+        System.out.println("Prix moyen : " + totalPrix/j);
     }
 }
