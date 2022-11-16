@@ -1,8 +1,14 @@
 package tp11tableaux;
 
+import java.util.Scanner;
+
 public class Program {
     public static void main(String[] args) {
         //- Programme principal du tp11 -
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Saisir un numéro :");
+        int num = sc.nextInt();
 
         //Déclaration du tableau de noms de produits
         String[] noms = {"Crayon", "Gomme", "Stylo", "Equerre", "Règle"};
@@ -11,7 +17,9 @@ public class Program {
         //Affichage des enregistrements du tableau
 
         for (int i = 0; i < noms.length; i++){
-            System.out.println(noms[i] + " - " + prix[i] + " €");
+            if(num == i){
+                System.out.println(noms[i] + " - " + prix[i] + " €");
+            }
         }
     }
 }
